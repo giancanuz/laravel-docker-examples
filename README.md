@@ -93,7 +93,7 @@ If these commands do not return the versions, install Docker and Docker Compose 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/giancanuz/laravel-docker-examples.git
+git clone git@github.com:giancanuz/laravel-docker-examples.git
 cd laravel-docker-examples
 ```
 
