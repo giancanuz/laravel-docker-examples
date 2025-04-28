@@ -93,7 +93,7 @@ If these commands do not return the versions, install Docker and Docker Compose 
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/rw4lll/laravel-docker-examples.git
+git clone https://github.com/giancanuz/laravel-docker-examples.git
 cd laravel-docker-examples
 ```
 
@@ -131,6 +131,17 @@ docker compose -f compose.dev.yaml exec workspace php artisan migrate
 5. Access the Application:
 
 Open your browser and navigate to [http://localhost](http://localhost).
+
+##### Getting missing APP_KEY error?
+
+```bash
+docker compose -f compose.dev.yaml exec workspace bash
+php artisan config:clear
+php artisan key:generate
+php artisan config:cache
+```
+reboot container. In case of generation error: stop container remove APP_KEY from .env. Add empty APP_KEY= in .env. restart container.
+Run the above command again. If still getting key error. stop & run container again. it should work now.
 
 ## Usage
 
