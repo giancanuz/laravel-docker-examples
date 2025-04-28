@@ -122,6 +122,15 @@ npm install
 npm run dev
 ```
 
+##### Getting php-fpm memory error?
+
+```
+php-fpm-1    | PHP Fatal error:  Uncaught Error: Failed opening required '/var/www/vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/artisan:9
+redis-1      | 1:C 28 Apr 2025 14:26:33.522 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+```
+try reboot container
+
+
 4. Run Migrations:
 
 ```bash
